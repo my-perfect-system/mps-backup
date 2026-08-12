@@ -1,0 +1,6 @@
+---
+- name: "BACKUP_MAIN - Resolve users"
+  ansible.builtin.include_tasks: resolve.yml
+
+- name: "BACKUP_MAIN - Configure per-user backup restore"
+  ansible.builtin.include_tasks: configure.yml

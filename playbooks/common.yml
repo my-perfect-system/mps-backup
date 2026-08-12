@@ -1,0 +1,6 @@
+---
+- name: Backup common install
+  hosts: all
+  become: true
+  roles:
+    - role: mps.backup.backup

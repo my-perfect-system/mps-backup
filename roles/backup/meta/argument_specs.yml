@@ -1,0 +1,28 @@
+---
+argument_specs:
+  main:
+    short_description: Restore per-user backups (SSH, config, home directory)
+    description:
+      - Uses users_list / users_catalog data structures shared with other mps roles.
+      - Resolves users via the standard three-step pipeline (validate, resolve, split).
+      - Users opt in via user_roles.backup: true in their catalog entry.
+      - Syncs SSH keys, config, and authorized keys from a backup source.
+      - Optionally restores Brave bookmarks.
+      - Syncs home directory contents from backup.
+      - Operates per-user via synchronize with become_user for correct ownership.
+    options:
+      backup_source:
+        type: str
+        required: false
+        default: ""
+        description: "Controller-side path to the backup root (contains home/ and brave/ dirs)"
+      backup_ssh_source:
+        type: str
+        required: false
+        default: ""
+        description: "Controller-side path to SSH backup data (keys/, config/, authorized/ dirs)"
+      backup_persist_brave:
+        type: bool
+        required: false
+        default: false
+        description: "Restore Brave browser bookmarks from backup_source/brave/Bookmarks"

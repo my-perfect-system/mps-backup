@@ -1,0 +1,3 @@
+---
+trivial:
+  - "Cleanup: removed unnecessary comments, hardened argument specifications, added missing metadata"

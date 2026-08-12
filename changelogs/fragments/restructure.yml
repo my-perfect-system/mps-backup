@@ -1,0 +1,5 @@
+---
+release_summary: "Restructured into standalone collection. Adds dependency on mps.base for shared conventions."
+minor_changes:
+  - "Dependency on mps.base added for shared conventions."
+  - "Repository URL points to standalone mps-backup repo."

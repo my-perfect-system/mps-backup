@@ -1,0 +1,29 @@
+---
+namespace: mps
+name: backup
+version: 0.3.0
+readme: README.md
+authors:
+  - foo <bar@baz.com>
+description: Per-user backup restore — SSH keys, config, bookmarks, home directory
+license:
+  - GPL-3.0-or-later
+tags:
+  - linux
+  - backup
+  - restore
+  - ssh
+  - mps
+repository: https://github.com/my-perfect-system/mps-backup
+documentation: https://github.com/my-perfect-system/mps-backup
+homepage: https://github.com/my-perfect-system/mps-backup
+issues: https://github.com/my-perfect-system/mps-backup/issues
+build_ignore:
+  - .git
+  - .github
+  - .gitignore
+  - "*.tar.gz"
+  - .ansible
+dependencies:
+  mps.base: ">=0.1.0"
+  ansible.posix: ">=1.0.0"
