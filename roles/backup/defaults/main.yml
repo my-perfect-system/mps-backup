@@ -1,4 +1,11 @@
 ---
-backup_source: ""
-backup_ssh_source: ""
+
+# Feature toggles — naming pattern: <rolename>_enable_<feature>
+
 backup_enable_persist_brave: false
+
+# Regular configuration
+
+backup_source: ""
+
+backup_ssh_source: ""
