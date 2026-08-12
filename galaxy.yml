@@ -19,6 +19,8 @@ documentation: https://github.com/my-perfect-system/mps-backup
 homepage: https://github.com/my-perfect-system/mps-backup
 issues: https://github.com/my-perfect-system/mps-backup/issues
 build_ignore:
+  .ansible-lint
+  .yamllint
   - .git
   - .github
   - .gitignore
