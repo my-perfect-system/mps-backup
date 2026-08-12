@@ -3,5 +3,5 @@
 # Compiles into changelogs/changelog.yaml at release time.
 minor_changes:
   - |
-    `mps.backup.backup` flattened: configure.yml (95L, per-user ssh dir create, 3× `synchronize` for keys/config/authorized_keys, perms fix, optional Brave bookmarks, home restore) inlined into a single `tasks/main.yml`.
+    `odem.backup.backup` flattened: configure.yml (95L, per-user ssh dir create, 3× `synchronize` for keys/config/authorized_keys, perms fix, optional Brave bookmarks, home restore) inlined into a single `tasks/main.yml`.
 

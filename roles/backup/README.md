@@ -1,10 +1,10 @@
 ---
-namespace: mps
+namespace: odem
 collection: backup
 role: backup
 ---
 
-# `mps.backup.backup`
+# `odem.backup.backup`
 
 Restore per-user backups (SSH, config, home directory)
 
@@ -18,14 +18,14 @@ Restore per-user backups (SSH, config, home directory)
 
 ## Dependencies
 
-- `mps.base.identity`
+- `odem.base.identity`
 
 ## Example usage
 
 ```yaml
 - hosts: all
   roles:
-    - mps.backup.backup
+    - odem.backup.backup
 ```
 
 ## Role metadata

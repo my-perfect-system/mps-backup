@@ -14,6 +14,6 @@ galaxy_info:
     - trixie
     - backup
     - restore
-    - mps-backup
+    - odem-backup
 dependencies:
-  - role: mps.base.identity
+  - role: odem.base.identity

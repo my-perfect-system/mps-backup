@@ -1,14 +1,14 @@
-# `mps.backup` Ansible Collection
+# `odem.backup` Ansible Collection
 
 Per-user backup restore — SSH keys, config, brave bookmarks, home
 directory. Uses `ansible.posix.synchronize` for efficient pulling.
 
 ## Galaxy metadata
 
-- **namespace**: `mps`
+- **namespace**: `odem`
 - **name**: `backup`
 - **version**: `0.3.1`
-- **dependencies**: `mps.base`, `ansible.posix`
+- **dependencies**: `odem.base`, `ansible.posix`
 
 See [`galaxy.yml`](galaxy.yml) for the canonical values.
 
@@ -16,7 +16,7 @@ See [`galaxy.yml`](galaxy.yml) for the canonical values.
 
 | Role | Purpose |
 |---|---|
-| [`mps.backup.backup`](roles/backup/README.md) | Per-user SSH keys + config + authorized_keys + brave bookmarks + home directory restore. |
+| [`odem.backup.backup`](roles/backup/README.md) | Per-user SSH keys + config + authorized_keys + brave bookmarks + home directory restore. |
 
 ## Required input
 
@@ -31,7 +31,7 @@ backup_enable_persist_brave: true
 ## Installation
 
 ```bash
-ansible-galaxy collection install mps.backup
+ansible-galaxy collection install odem.backup
 ```
 
 ## Usage
@@ -40,8 +40,8 @@ ansible-galaxy collection install mps.backup
 - hosts: restore_targets
   become: true
   roles:
-    - mps.base.identity
-    - mps.backup.backup
+    - odem.base.identity
+    - odem.backup.backup
 ```
 
 ## Caveats

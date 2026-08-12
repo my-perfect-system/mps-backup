@@ -1,5 +1,5 @@
 ---
-namespace: mps
+namespace: odem
 name: backup
 version: 0.3.1
 readme: README.md
@@ -13,11 +13,11 @@ tags:
   - backup
   - restore
   - ssh
-  - mps
-repository: https://github.com/my-perfect-system/mps-backup
-documentation: https://github.com/my-perfect-system/mps-backup
-homepage: https://github.com/my-perfect-system/mps-backup
-issues: https://github.com/my-perfect-system/mps-backup/issues
+  - odem
+repository: https://github.com/my-perfect-system/odem-backup
+documentation: https://github.com/my-perfect-system/odem-backup
+homepage: https://github.com/my-perfect-system/odem-backup
+issues: https://github.com/my-perfect-system/odem-backup/issues
 build_ignore:
   .ansible-lint
   .yamllint
@@ -27,5 +27,5 @@ build_ignore:
   - "*.tar.gz"
   - .ansible
 dependencies:
-  mps.base: ">=0.1.0"
+  odem.base: ">=0.1.0"
   ansible.posix: ">=1.0.0"
