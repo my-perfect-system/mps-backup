@@ -1,4 +1,4 @@
 ---
 backup_source: ""
 backup_ssh_source: ""
-backup_persist_brave: false
+backup_enable_persist_brave: false

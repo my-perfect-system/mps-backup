@@ -79,7 +79,7 @@
   loop_control:
     loop_var: entity
     label: "{{ entity.name }}"
-  when: backup_persist_brave
+  when: backup_enable_persist_brave
 
 - name: "BACKUP - Sync homedir"
   ansible.posix.synchronize:

@@ -21,7 +21,7 @@ argument_specs:
         required: false
         default: ""
         description: "Controller-side path to SSH backup data (keys/, config/, authorized/ dirs)"
-      backup_persist_brave:
+      backup_enable_persist_brave:
         type: bool
         required: false
         default: false
