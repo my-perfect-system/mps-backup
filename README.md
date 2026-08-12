@@ -16,7 +16,7 @@ See [`galaxy.yml`](galaxy.yml) for the canonical values.
 
 | Role | Purpose |
 |---|---|
-| `mps.backup.backup` | Per-user SSH keys + config + authorized_keys + brave bookmarks + home directory restore. |
+| [`mps.backup.backup`](roles/backup/README.md) | Per-user SSH keys + config + authorized_keys + brave bookmarks + home directory restore. |
 
 ## Required input
 
