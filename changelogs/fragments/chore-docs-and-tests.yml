@@ -1,0 +1,7 @@
+---
+# Fragment for the refactor pass.
+# Compiles into changelogs/changelog.yaml at release time.
+minor_changes:
+  - |
+    Per-role READMEs auto-generated; collection README links every role. Linting configs added. Molecule smoke tests added.
+
