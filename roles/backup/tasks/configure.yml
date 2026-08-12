@@ -1,5 +1,5 @@
 ---
-- name: "BACKUP - Create ssh folder"
+- name: Create per-user ssh directory
   become: true
   become_user: "{{ entity.name }}"
   ansible.builtin.file:
@@ -13,7 +13,7 @@
     loop_var: entity
     label: "{{ entity.name }}"
 
-- name: "BACKUP - Sync ssh keys"
+- name: Restore ssh private keys per user
   ansible.posix.synchronize:
     src: "{{ backup_ssh_source }}/keys/"
     dest: "{{ entity.home }}/.ssh/"
@@ -26,7 +26,7 @@
     loop_var: entity
     label: "{{ entity.name }}"
 
-- name: "BACKUP - Sync ssh config"
+- name: Restore ssh config per user
   ansible.posix.synchronize:
     src: "{{ backup_ssh_source }}/config/"
     dest: "{{ entity.home }}/.ssh/"
@@ -39,7 +39,7 @@
     loop_var: entity
     label: "{{ entity.name }}"
 
-- name: "BACKUP - Sync ssh authorized keys"
+- name: Restore ssh authorized keys per user
   ansible.posix.synchronize:
     src: "{{ backup_ssh_source }}/authorized/"
     dest: "{{ entity.home }}/.ssh/"
@@ -52,7 +52,7 @@
     loop_var: entity
     label: "{{ entity.name }}"
 
-- name: "BACKUP - Fix ssh permissions"
+- name: Fix ssh directory permissions per user
   become: true
   ansible.builtin.file:
     path: "{{ entity.home }}/.ssh"
@@ -66,7 +66,7 @@
     loop_var: entity
     label: "{{ entity.name }}"
 
-- name: "BACKUP - Restore Brave bookmarks"
+- name: Restore Brave bookmarks per user
   become: true
   become_user: "{{ entity.name }}"
   ansible.builtin.copy:
@@ -81,7 +81,7 @@
     label: "{{ entity.name }}"
   when: backup_enable_persist_brave
 
-- name: "BACKUP - Sync homedir"
+- name: Restore home directory per user
   ansible.posix.synchronize:
     src: "{{ backup_source }}/home/"
     dest: "{{ entity.home }}/"
