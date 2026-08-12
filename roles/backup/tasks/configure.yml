@@ -8,7 +8,7 @@
     owner: "{{ entity.name }}"
     group: "{{ entity.group | default(entity.name) }}"
     mode: "0700"
-  loop: "{{ backup_users_present }}"
+  loop: "{{ identity_users_present }}"
   loop_control:
     loop_var: entity
     label: "{{ entity.name }}"
@@ -21,7 +21,7 @@
     delete: false
   become: true
   become_user: "{{ entity.name }}"
-  loop: "{{ backup_users_present }}"
+  loop: "{{ identity_users_present }}"
   loop_control:
     loop_var: entity
     label: "{{ entity.name }}"
@@ -34,7 +34,7 @@
     delete: false
   become: true
   become_user: "{{ entity.name }}"
-  loop: "{{ backup_users_present }}"
+  loop: "{{ identity_users_present }}"
   loop_control:
     loop_var: entity
     label: "{{ entity.name }}"
@@ -47,7 +47,7 @@
     delete: false
   become: true
   become_user: "{{ entity.name }}"
-  loop: "{{ backup_users_present }}"
+  loop: "{{ identity_users_present }}"
   loop_control:
     loop_var: entity
     label: "{{ entity.name }}"
@@ -61,7 +61,7 @@
     group: "{{ entity.group | default(entity.name) }}"
     mode: "0700"
     recurse: true
-  loop: "{{ backup_users_present }}"
+  loop: "{{ identity_users_present }}"
   loop_control:
     loop_var: entity
     label: "{{ entity.name }}"
@@ -75,7 +75,7 @@
     owner: "{{ entity.name }}"
     group: "{{ entity.group | default(entity.name) }}"
     mode: "0600"
-  loop: "{{ backup_users_present }}"
+  loop: "{{ identity_users_present }}"
   loop_control:
     loop_var: entity
     label: "{{ entity.name }}"
@@ -89,7 +89,7 @@
     delete: false
   become: true
   become_user: "{{ entity.name }}"
-  loop: "{{ backup_users_present }}"
+  loop: "{{ identity_users_present }}"
   loop_control:
     loop_var: entity
     label: "{{ entity.name }}"
